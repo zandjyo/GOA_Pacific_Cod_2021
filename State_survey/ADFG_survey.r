@@ -80,7 +80,8 @@ data$pres[data$total_weight_kg>0]<-1
 
 data3<-data[pres==0]
 
-## plot maps of ADFG survey
+## plot maps of ADFG survey 
+## These won't work unless you have registered ggmap with google. See ?register_google for details.
 bering<-get_map(location=c(lon=-158,lat=56),zoom=6,maptype="toner", color="bw")
 k<-ggmap(bering)
 k <- k + geom_point(data=data,aes(x=start_longitude,y=start_latitude,color=log(density)), size=0.1)
