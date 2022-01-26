@@ -5,6 +5,7 @@
 library(data.table)
 library(ggplot2)
 library(ggridges)
+library(ggmap)
 
 dglm = dget("delta_glm_1-7-2.get")
 data<-read.csv("1988to2021pcodcatch.csv")
